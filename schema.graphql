@@ -1,0 +1,126 @@
+
+type User @model {
+  id: ID!
+  role: String! # Custom access (national admin members, mentors, and student leaders)
+  name: String!
+  imageUri: String
+  chapter: String
+  age: String
+  otherInformation: String
+  # Add a reference to the user's signed waivers
+  waivers: [Waiver] @connection(name: "UserWaivers")
+
+  # Add a reference to training videos
+  trainingVideos: [TrainingVideo] @connection(name: "UserTrainingVideos")
+
+  # Add a reference to days off
+  daysOff: [DayOff] @connection(name: "UserDaysOff")
+
+  # Add a reference to time logs (for student leaders and mentors)
+  timeLogs: [TimeLog] @connection(name: "UserTimeLogs")
+
+  # Add a reference to legal documents (only for admin members)
+  legalDocuments: [LegalDocument] @connection(name: "UserLegalDocuments")
+}
+
+type Waiver @model {
+  id: ID!
+  # Reference to the user who signed the waiver
+  user: User @connection(name: "UserWaivers")
+  # Add fields for waiver details, e.g., document URI, date, etc.
+  documentUri: String
+  dateSigned: AWSDate
+}
+
+type TrainingVideo @model {
+  id: ID!
+  # Reference to the user who watched the video
+  user: User @connection(name: "UserTrainingVideos")
+  # Add fields for video details, e.g., video URI, completion status, etc.
+  videoUri: String
+  completed: Boolean
+}
+
+type DayOff @model {
+  id: ID!
+  # Reference to the user who is taking a day off
+  user: User @connection(name: "UserDaysOff")
+  # Add fields for day off details, e.g., date, reason, etc.
+  date: AWSDate
+  reason: String
+}
+
+type TimeLog @model {
+  id: ID!
+  # Reference to the user for whom the time log is being recorded (student leader or mentor)
+  user: User @connection(name: "UserTimeLogs")
+  # Add fields for time log details, e.g., hours worked, date, activity, etc.
+  hoursWorked: Int
+  date: AWSDate
+  activity: String
+}
+
+type LegalDocument @model {
+  id: ID!
+  # Reference to the user for whom the document is uploaded (student leader or mentor)
+  user: User @connection(name: "UserLegalDocuments")
+  # Add fields for legal document details, e.g., document URI, description, etc.
+  documentUri: String
+  description: String
+}
+
+# You may want to define custom access control rules in the Amplify CLI based on user roles to ensure
+# that only national admin members can view certain information.
+
+
+# type User @model {
+#   id: ID!
+#   name: String!
+#   imageUri: String
+#   status: String
+#   lastOnlineAt: AWSTimestamp
+#   role: String
+#   expoPushToken: String
+#   chatRoomUser: [ChatRoomUser] @connection(keyName: "byUser", fields: ["id"])
+# }
+
+# type ChatRoomUser 
+# @model 
+# @key(name: "byUser", fields: ["userID", "chatRoomID"])
+# @key(name: "byChatRoom", fields: ["chatRoomID", "userID"]) {
+#   id: ID!
+#   userID: ID!
+#   chatRoomID: String!
+#   user: User @connection(fields: ["userID"])
+#   chatRoom: ChatRoom @connection(fields: ["chatRoomID"])
+# }
+
+# type ChatRoom 
+# @model 
+# @key(fields: ["id"]) {
+#   id: String!
+#   name: String
+#   imageUri: String
+#   chatRoomUsers: [ChatRoomUser] @connection(keyName: "byChatRoom", fields: ["id"])
+#   messages: [Message] @connection(keyName: "byChatRoom", fields: ["id"])
+#   lastMessageID: ID
+#   lastMessage: Message @connection(fields: ["lastMessageID"])
+#   }
+
+# type Message
+# @model
+# @key(
+#   name: "byChatRoom", 
+#   fields: ["chatRoomID", "createdAt"], 
+#   queryField : "messagesByChatRoom") {
+#   id: ID!
+#   replyToMessageID: ID
+#   createdAt: String!
+#   content: String
+#   image: String
+#   audio: String
+#   userID: ID!
+#   chatRoomID: String!
+#   user: User @connection(fields: ["userID"])
+#   chatRoom: ChatRoom @connection(fields: ["chatRoomID"])
+# }

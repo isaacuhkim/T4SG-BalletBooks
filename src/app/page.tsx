@@ -1,113 +1,105 @@
-import Image from 'next/image'
+//import Link from 'next/link'
+import React from 'react'
+import balletAndBooks from '../../assets/balletAndBooks.jpg'
+import google from '../../assets/google.png'
+import Link from 'next/link';
+import GoogleIcon from '@mui/icons-material/Google';
 
-export default function Home() {
+const colors = {
+    primary: "060606",
+    background: "#E0E0E0",
+    disbaled: "#D9D9D9",
+}
+//first div, min-h-screen makes photo cover half of screen
+const LoginScreen = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className='w-full h-screen flex items-start'>
+        <div className='relative w-1/2 h-full flex flex-col'>
+            <div className='absolute top-[20%] left-[10%] flex flex-col'>
+                <h1 className='text-4xl text-white font-bold my-4'>Learning through dance</h1>
+                <p className='text-xl text-white font-normal'>Blah blah blah blah blah </p>
+            </div>
+            <img src={balletAndBooks.src} className='w-full h-full object-cover'/>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 justify-between items-center'>
+            <h1 className='w-full text-xl text-[#060606] max-w-[500px] mx-auto mr-auto font-semibold'>Ballet & Books</h1>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <div className='w-full flex flex-col max-w-[500px]'>
+                <div className='w-full flex flex-col mb-2'>
+                    <h3 className='text-3xl font-semibold mb-2 text-[#060606]'>Login</h3>
+                    <p className='text-base mb-2 text-[#060606]'>Welcome Back! Please enter your details</p>
+                </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+                <div className='w-full flex flex-col'>
+                    <input
+                        type='email'
+                        placeholder='Email'
+                        className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'
+                    />
+                    <input
+                        type='password'
+                        placeholder='Password'
+                        className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'
+                    />
+                </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+                <div className='w-full flex items-center justify-between'>
+                    <div className='w-full flex'>
+                        <input type='checkbox' className='w-4 h-4 mr-2 cursor-pointer' />
+                        <p className='text-sm text-[#060606]'>Remember Me for 30 days</p>
+                    </div> 
+                    <p className='text-sm font-medium whitespace-nowrap cursor-pointer underline underline-offset-2 text-[#060606]'>Forgot Password?</p>
+                </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+                <div className='w-full flex flex-col my-4'>
+                    <button className='w-full text-white my-2 font-semibold bg-[#060606] rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+                        Login
+                    </button>
+                    <button className='w-full text-[#060606] my-2 font-semibold bg-white border-2 border-black/40 rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+                        Register
+                    </button>
+                </div>
+
+                <div className='w-full flex items-center justify-center relative py-2'>
+                    <div className='w-full h-[1px] bg-black'></div>
+                    <p className='text-lg absolute text-black/80 bg-[#f5f5f5]'>or</p>
+                </div> 
+
+                <div className='w-full text-[#060606] my-2 font-semibold bg-white border border-black/40 rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+                    <img src={google.src} className='h-6 mr-2'/>
+                    Sign in With Google
+                </div>
+
+
+            </div>
+
+            <div className='w-full flex items-center justify-center'>
+                <p className='text-sm font-normal text-[#060606]'>Don't have an account? 
+                    <span className='font-semibold underline underline-offset-2 cursor-pointer'>
+                        Sign up!
+                    </span>
+                    <Link href='/register'>this page!</Link>
+                </p>
+            </div>
+        </div>
+    </div>
   )
 }
+
+export default LoginScreen
+
+
+
+// import Link from "next/link";
+// import LoginScreen from "./screens/page";
+// //import RegisterScreen from "../../oldScreenFolder/RegisterScreen";
+// export default function Home() {
+//   return (
+//     // <LoginScreen />
+//     <div>
+//     <Link href='/screens'>Click here to visit login page</Link>
+//     <Link href='/register'>Click here to visit register page</Link>
+//     </div>
+//   )
+// }
