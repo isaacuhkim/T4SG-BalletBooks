@@ -17,17 +17,17 @@ const LoginScreen = () => {
         <div className='relative w-1/2 h-full flex flex-col'>
             <div className='absolute top-[20%] left-[10%] flex flex-col'>
                 <h1 className='text-4xl text-white font-bold my-4'>Learning through dance</h1>
-                <p className='text-xl text-white font-normal'>Striving to reduce the literact gap through dance and reading </p>
+                <p className='text-xl text-white font-normal'>Striving to reduce the literacy gap through dance and reading </p>
             </div>
             <img src={balletAndBooks.src} className='w-full h-full object-cover'/>
         </div>
 
         <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 justify-between items-center'>
-            <h1 className='w-full text-xl text-[#060606] max-w-[500px] mx-auto mr-auto font-semibold'>Ballet & Books</h1>
+            <h1 className='w-full text-3xl text-[#060606] max-w-[500px] mx-auto mr-auto font-semibold mb-4'>Ballet & Books</h1>
 
             <div className='w-full flex flex-col max-w-[500px]'>
                 <div className='w-full flex flex-col mb-2'>
-                    <h3 className='text-3xl font-semibold mb-2 text-[#060606]'>Login</h3>
+                    <h3 className='text-xl font-semibold mb-2 text-[#060606]'>Login</h3>
                     <p className='text-base mb-2 text-[#060606]'>Welcome Back! Please enter your details</p>
                 </div>
 
@@ -74,13 +74,12 @@ const LoginScreen = () => {
 
             </div>
 
-            <div className='w-full flex items-center justify-center'>
+            <div className='w-full flex items-center justify-center gap-x-2'>
                 <p className='text-sm font-normal text-[#060606]'>Don't have an account? 
-                    {/* <span className='font-semibold underline underline-offset-2 cursor-pointer'>
-                        Sign up!
-                    </span> */}
-                    <Link href='/register'>Sign up!</Link>
-                </p>
+                </p>                 
+                 <div className='text-sm font-normal text-[#060606] underline underline-offset-2 cursor-pointer'>
+                    <Link href='/register'> Sign up!</Link>
+                </div>
             </div>
         </div>
     </div>

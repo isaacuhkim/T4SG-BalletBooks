@@ -9,7 +9,7 @@ function RegisterScreen() {
           <div className='relative w-1/2 h-full flex flex-col'>
               <div className='absolute top-[20%] left-[10%] flex flex-col'>
                   <h1 className='text-4xl text-white font-bold my-4'>Learning through dance</h1>
-                  <p className='text-xl text-white font-normal'>Striving to reduce the literact gap through dance and reading </p>
+                  <p className='text-xl text-white font-normal'>Striving to reduce the literacy gap through dance and reading </p>
               </div>
               <img src={balletAndBooks.src} className='w-full h-full object-cover'/>
           </div>
@@ -48,27 +48,35 @@ function RegisterScreen() {
                         <label className="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label">show</label> */}
                         <input className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="text" autoComplete='off'/>
                     </div>
-                    <div className="mb-4">
+                    <div className="mb-1">
                         <label className="block text-gray-700 text-sm font-bold mb-2">
                             How would you describe yourself?
                         </label>
                     </div>
-                    <div id='dropdown'>
-                        
-                    </div>
-
+                    {/* <label className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label> */}
+                        <select id="countries" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option selected>Select an option</option>
+                        <option value="adminMember">Admin Member</option>
+                        <option value="mentor">Mentor</option>
+                        <option value="studentLeader">Student Leader</option>
+                        </select>
                   </div>
   
               </div>
-  
-              <div className='w-full flex items-center justify-center'>
-                  <p className='text-sm font-normal text-[#060606]'>Don't have an account? 
-                      <span className='font-semibold underline underline-offset-2 cursor-pointer'>
-                          Sign up!
-                      </span>
-                      <Link href='/register'>this page!</Link>
-                  </p>
+
+              <div className='flex flex-col gap-y-4'>
+                    <div className='text-sm'>
+                        <p>Agree to Terms and Conditions</p>
+                    </div>
+
+                    <div className='text-sm w-full flex items-center justify-center'>
+
+                            <div className='font-semibold underline underline-offset-2 cursor-pointer'>
+                                <Link href='/'>Back to Sign In</Link>
+                            </div>
+                    </div>
               </div>
+              
           </div>
       </div>
     )
