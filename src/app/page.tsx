@@ -17,7 +17,7 @@ const LoginScreen = () => {
         <div className='relative w-1/2 h-full flex flex-col'>
             <div className='absolute top-[20%] left-[10%] flex flex-col'>
                 <h1 className='text-4xl text-white font-bold my-4'>Learning through dance</h1>
-                <p className='text-xl text-white font-normal'>Blah blah blah blah blah </p>
+                <p className='text-xl text-white font-normal'>Striving to reduce the literact gap through dance and reading </p>
             </div>
             <img src={balletAndBooks.src} className='w-full h-full object-cover'/>
         </div>
@@ -76,10 +76,10 @@ const LoginScreen = () => {
 
             <div className='w-full flex items-center justify-center'>
                 <p className='text-sm font-normal text-[#060606]'>Don't have an account? 
-                    <span className='font-semibold underline underline-offset-2 cursor-pointer'>
+                    {/* <span className='font-semibold underline underline-offset-2 cursor-pointer'>
                         Sign up!
-                    </span>
-                    <Link href='/register'>this page!</Link>
+                    </span> */}
+                    <Link href='/register'>Sign up!</Link>
                 </p>
             </div>
         </div>

@@ -1,9 +1,78 @@
 import React from 'react'
+import balletAndBooks from '../../../assets/balletAndBooks.jpg'
+import google from '../../../assets/google.png'
+import Link from 'next/link';
 
 function RegisterScreen() {
-  return (
-    <div>registerScreen</div>
-  )
+    return (
+      <div className='w-full h-screen flex items-start'>
+          <div className='relative w-1/2 h-full flex flex-col'>
+              <div className='absolute top-[20%] left-[10%] flex flex-col'>
+                  <h1 className='text-4xl text-white font-bold my-4'>Learning through dance</h1>
+                  <p className='text-xl text-white font-normal'>Striving to reduce the literact gap through dance and reading </p>
+              </div>
+              <img src={balletAndBooks.src} className='w-full h-full object-cover'/>
+          </div>
+  
+          <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 justify-between items-center'>
+              {/* <h1 className='w-full text-xl text-[#060606] max-w-[500px] mx-auto mr-auto font-semibold'>Ballet & Books</h1> */}
+  
+              <div className='w-full flex flex-col max-w-[500px]'>
+                  <div className='w-full flex flex-col mb-2'>
+                    <h3 className='text-3xl font-semibold mb-2 text-[#060606]'>Time to Sign Up</h3>
+                    <div className="mb-4 mt-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2">
+                            Username
+                        </label>
+                        <input className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text"/>
+                    </div>
+                    <div className='flex flex-row gap-2 justify-between' >
+                        <div className="mb-4">
+                            <label className="block text-gray-700 text-sm font-bold mb-2">
+                                First Name
+                            </label>
+                            <input className="shadow appearance-none border py-2 px-3 w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname" type="text"/>
+                        </div>
+                        <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2">
+                            Last Name
+                        </label>
+                        <input className="shadow appearance-none border py-2 px-3 w-full text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" type="text"/>
+                    </div>
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2">
+                            Password
+                        </label>
+                        {/* <input className="hidden js-password-toggle" id="toggle" type="checkbox" />
+                        <label className="bg-gray-300 hover:bg-gray-400 rounded px-2 py-1 text-sm text-gray-600 font-mono cursor-pointer js-password-label">show</label> */}
+                        <input className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="text" autoComplete='off'/>
+                    </div>
+                    <div className="mb-4">
+                        <label className="block text-gray-700 text-sm font-bold mb-2">
+                            How would you describe yourself?
+                        </label>
+                    </div>
+                    <div id='dropdown'>
+                        
+                    </div>
+
+                  </div>
+  
+              </div>
+  
+              <div className='w-full flex items-center justify-center'>
+                  <p className='text-sm font-normal text-[#060606]'>Don't have an account? 
+                      <span className='font-semibold underline underline-offset-2 cursor-pointer'>
+                          Sign up!
+                      </span>
+                      <Link href='/register'>this page!</Link>
+                  </p>
+              </div>
+          </div>
+      </div>
+    )
+
 }
 
 export default RegisterScreen
