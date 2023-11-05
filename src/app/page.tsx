@@ -53,10 +53,10 @@ const LoginScreen = () => {
                 </div>
 
                 <div className='w-full flex flex-col my-4'>
-                    <button className='w-full text-white my-2 font-semibold bg-[#060606] rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+                    <button className='w-full text-white my-2 font-semibold bg-[#060606] p-4 text-center flex items-center justify-center cursor-pointer'>
                         Login
                     </button>
-                    <button className='w-full text-[#060606] my-2 font-semibold bg-white border-2 border-black/40 rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+                    <button className='w-full text-[#060606] my-2 font-semibold bg-white border-2 border-black/40 p-4 text-center flex items-center justify-center cursor-pointer'>
                         Register
                     </button>
                 </div>
@@ -66,7 +66,7 @@ const LoginScreen = () => {
                     <p className='text-lg absolute text-black/80 bg-[#f5f5f5]'>or</p>
                 </div> 
 
-                <div className='w-full text-[#060606] my-2 font-semibold bg-white border border-black/40 rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
+                <div className='w-full text-[#060606] my-2 font-semibold bg-white border border-black/40 p-4 text-center flex items-center justify-center cursor-pointer'>
                     <img src={google.src} className='h-6 mr-2'/>
                     Sign in With Google
                 </div>
