@@ -1,5 +1,5 @@
 import React from 'react'
-import balletAndBooks from '../../../assets/balletAndBooks.jpg'
+import img from '../../../assets/balletAndBooks.jpg'
 import google from '../../../assets/google.png'
 import Link from 'next/link';
 
@@ -11,7 +11,7 @@ function RegisterScreen() {
                   <h1 className='text-4xl text-white font-bold my-4'>Learning through dance</h1>
                   <p className='text-xl text-white font-normal'>Striving to reduce the literacy gap through dance and reading </p>
               </div>
-              <img src={balletAndBooks.src} className='w-full h-full object-cover'/>
+              <img src={img.src} className='w-full h-full object-cover'/>
           </div>
   
           <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-20 justify-between items-center'>
@@ -22,9 +22,9 @@ function RegisterScreen() {
                     <h3 className='text-3xl font-semibold mb-2 text-[#060606]'>Time to Sign Up</h3>
                     <div className="mb-4 mt-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2">
-                            Username
+                            Email
                         </label>
-                        <input className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text"/>
+                        <input className="shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="text"/>
                     </div>
                     <div className='flex flex-row gap-2 justify-between' >
                         <div className="mb-4">
