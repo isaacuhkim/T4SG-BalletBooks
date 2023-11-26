@@ -92,7 +92,7 @@ function RegisterScreen() {
       
           console.log(`User successfully signed in with: ${user.uid}`);
         } catch (error) {
-          console.error('Error during sign-up:', error.message);
+          console.error('Error during sign-up:', error);
           console.log("Could not sign up!");
         }
       };

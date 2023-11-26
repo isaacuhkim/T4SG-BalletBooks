@@ -17,7 +17,7 @@ const colors = {
 }
 
 export default function Home () {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState(null as any);
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(async (user) => {
@@ -33,7 +33,7 @@ export default function Home () {
             console.log('User document does not exist.');
           }
         } catch (error) {
-          console.error('Error fetching user data:', error.message);
+          console.error('Error fetching user data:', error); //error.message
         }
       } else {
         // Handle the case when the user is not authenticated
