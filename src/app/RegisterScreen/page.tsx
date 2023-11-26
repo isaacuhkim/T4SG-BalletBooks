@@ -7,7 +7,6 @@ import { createUserWithEmailAndPassword, getAuth, updateProfile } from 'firebase
 import { auth, db } from '../firebase';
 import { addDoc, collection, getDoc, doc, setDoc } from 'firebase/firestore';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 function RegisterScreen() {
     const [email, setEmail] = useState('');
@@ -109,7 +108,7 @@ function RegisterScreen() {
                   <h1 className='text-4xl text-white font-bold my-4'>Let's Get Started</h1>
                   <p className='text-xl text-white font-normal'>Sign up to get connected with us! </p>
               </div>
-              <Image alt={jumpingBallerina.src} src={jumpingBallerina.src} width={1000} height={1000} className='w-full h-full object-cover'/>
+              <img src={jumpingBallerina.src} className='w-full h-full object-cover'/>
           </div>
   
           <div className='w-1/2 h-full bg-[#f5f5f5] flex flex-col p-10 justify-between items-center'>
