@@ -37,7 +37,7 @@ export default function Home () {
         }
       } else {
         // Handle the case when the user is not authenticated
-        setUserData(null);
+        setUserData(null as any);
       }
     });
 
@@ -67,6 +67,8 @@ export default function Home () {
           <button className='text-white' onClick={() => signOut()}>Logout</button>
         </div>
       )}
+                <button className='text-white' onClick={() => signOut()}>Logout</button>
+
     </div>
   )
 }
