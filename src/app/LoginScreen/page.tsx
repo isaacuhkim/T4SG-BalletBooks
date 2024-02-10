@@ -24,6 +24,7 @@ const LoginScreen = () => {
           console.log(`User successfully signed in with: ${user.uid}`);
 
           // You can redirect or perform other actions after successful sign-in
+          
         } catch (e) {
             console.log(e);
             console.log("Could not sign in!")
