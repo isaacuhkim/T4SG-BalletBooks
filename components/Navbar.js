@@ -10,22 +10,22 @@ const Navbar = () => {
             <img src={logo.src} className='w-auto h-auto max-h-7 max-w-px items-center'/>
         </Link>
         <li>
-            <Link href="/TrainingScreen">Training</Link>
+            <Link href="/training">Training</Link>
         </li>
         <li>
-            <Link href="/">Curriculum</Link>
+            <Link href="/curriculum">Curriculum</Link>
         </li>
         <li>
-            <Link href="/">Calendar</Link>
+            <Link href="/calendar">Calendar</Link>
         </li>
         <li>
-            <Link href="/">Documents</Link>
+            <Link href="/documents">Documents</Link>
         </li>
         <li>
-            <Link href="/">Account</Link>
+            <Link href="/account">Account</Link>
         </li>
         <li>
-            <Link href="/RegistrationFormScreen">Registration Form</Link>
+            <Link href="/registration">Registration Form</Link>
         </li>
     </ul>
   );
