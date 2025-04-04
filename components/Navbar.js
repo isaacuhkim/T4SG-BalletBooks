@@ -10,23 +10,21 @@ const Navbar = () => {
             <img src={logo.src} className='w-auto h-auto max-h-7 max-w-px items-center'/>
         </Link>
         <li>
-            <Link href="/training">Training</Link>
-        </li>
-        <li>
             <Link href="/curriculum">Curriculum</Link>
         </li>
         <li>
-            <Link href="/calendar">Calendar</Link>
+            <Link href="/calendar">Students</Link>
+        </li>
+        <li>
+            <Link href="/documents">Training</Link>
         </li>
         <li>
             <Link href="/documents">Documents</Link>
         </li>
         <li>
-            <Link href="/account">Account</Link>
+            <Link href="/account">Calendar</Link>
         </li>
-        <li>
-            <Link href="/registration">Registration Form</Link>
-        </li>
+        
     </ul>
   );
 };

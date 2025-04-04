@@ -1,10 +1,6 @@
 'use client'
 //import Link from 'next/link'
 import React, {useEffect, useState} from 'react'
-import balletAndBooks from '../../assets/balletAndBooks.jpg'
-import google from '../../assets/google.png'
-import Link from 'next/link';
-import GoogleIcon from '@mui/icons-material/Google';
 import { signOut, useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 import { auth, db } from './firebase';

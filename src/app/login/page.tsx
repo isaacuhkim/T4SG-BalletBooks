@@ -112,7 +112,7 @@ const LoginScreen = () => {
                 </div> 
 
                 <button 
-                    onClick={() => router.push('/RegisterScreen')}
+                    onClick={() => router.push('/register')}
                     className='w-full text-[#58B4D1] font-semibold bg-white border border-black/40 rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
                     {/* <img src={google.src} className='h-6 mr-2'/> */}
                     Sign Up

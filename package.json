@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^6.9.4",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.13",
@@ -16,6 +17,7 @@
     "@nextui-org/react": "^2.2.9",
     "@nextui-org/system": "^2.0.15",
     "@nextui-org/theme": "^2.1.17",
+    "aws-amplify": "^6.13.6",
     "firebase": "^10.5.2",
     "framer-motion": "^11.0.3",
     "next": "13.5.4",
@@ -25,15 +27,22 @@
     "react-google-forms-hooks": "^1.2.4"
   },
   "devDependencies": {
+    "@aws-amplify/backend": "^1.14.3",
+    "@aws-amplify/backend-cli": "^1.5.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.16",
+    "aws-cdk": "^2.1003.0",
+    "aws-cdk-lib": "^2.180.0",
+    "constructs": "^10.4.2",
     "encoding": "^0.1.13",
+    "esbuild": "^0.25.1",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.3",
-    "typescript": "^5"
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
   }
 }
